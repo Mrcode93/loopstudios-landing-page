@@ -211,6 +211,66 @@ body {
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
   }
+  .products {
+    height: 60%;
+  }
+  .products ul {
+    margin-top: 30px;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+    height: 60%;
+  }
+  .products .logo_2 {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+  .products ul li a {
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 2.3px;
+    position: relative;
+    margin-top: 50px;
+  }
+  .products ul li a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background-color: hsl(0deg, 0%, 100%);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+  .products ul li a:hover:before {
+    width: 30%;
+  }
+  .products footer {
+    color: hsl(0deg, 0%, 55%);
+    font-family: "Alata", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (min-width: 769px) {
   .header {
@@ -400,6 +460,77 @@ body {
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
   }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .products ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .products ul li a {
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 2.3px;
+    position: relative;
+    margin-top: 50px;
+  }
+  .products ul li a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background-color: hsl(0deg, 0%, 100%);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+  .products ul li a:hover:before {
+    width: 30%;
+  }
+  .products .logo_2 {
+    grid-area: 1/1/2/2;
+  }
+  .products .links {
+    grid-area: 2/1/3/2;
+  }
+  .products .media {
+    grid-area: 1/2/2/3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .products .media a:hover:before {
+    width: 100%;
+  }
+  .products footer {
+    grid-area: 2/2/3/3;
+    color: hsl(0deg, 0%, 55%);
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 .header {
   display: flex;
@@ -441,11 +572,16 @@ body {
 }
 
 .products {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   background-color: hsl(0deg, 0%, 0%);
   margin-top: 30px;
   padding: 2rem 4rem;
+}
+.products .media ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.products ul li {
+  margin: 10px;
 }/*# sourceMappingURL=style.css.map */
